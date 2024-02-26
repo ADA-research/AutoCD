@@ -55,3 +55,7 @@ The output results of AutoCD are evaluated using the following command:
 python eval.py --data_dir data/dataset/mixed_20_20 --result_dir output/oct/mixed_20_20/autocd --sample_size 5 --n_samples 1000 --trial_walltime_limit 900 --repetitions 25 --seed 0 
 ```
 This command makes adjustments to the sparsity.pkl, mb_size.pkl, pool_yhats.pkl files in the result directory that will be used for AutoCD+ (AutoCD with a post-hoc correction). It computes an additional file graphs.pkl in the result directory to make evaluation faster. It then runs the evaluation using the best found configuration of AutoCD and it runs the evaluation using the best found configuration of AutoCD+. The results are stored in the folder "results/oct/mixed_20_20" and the bootstrap results are stored in the folder "bootstrap/oct/mixed_20_20".
+
+### Visualizations
+
+The Jupyter notebook under visualizations can be used to visualize the AutoCD results.
