@@ -1,0 +1,14 @@
+python==3.9
+numpy
+pandas
+scipy
+torch
+scikit-learn
+networkx==2.5
+tqdm
+statsmodels
+matplotlib
+pydot
+smac
+gcastle
+causal-learn
