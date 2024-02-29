@@ -19,11 +19,10 @@ pip install Jpype1
 ```bash
 git clone https://github.com/cmu-phil/py-tetrad/
 ```
-* Download the JAR file from github repository causal-cmd and store JAR file under causalcmd folder
+* Download the JAR file from github repository causal-cmd and store JAR file under causalcmd folder https://github.com/bd2kccd/causal-cmd/ 
 ```bash
 mkdir causalcmd
 ```
-https://github.com/bd2kccd/causal-cmd/ 
 
 Instruction to install SMAC can be found in [SMAC3](https://github.com/automl/SMAC3). However, this repository is only tested with Python 3.9. The other Python packages can be installed:
 ```bash
