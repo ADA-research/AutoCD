@@ -1,2 +1,0 @@
-stars,shd,accuracy,fp,fn,config
-0.0465,1,0,0,1,"{""algorithm"": ""cpcstable"", ""cpcstable_alpha"": 0.0239634283259511, ""cpcstable_depth"": -1, ""cpcstable_rule"": 3, ""cpcstable_test"": ""cg-lr-test""}"

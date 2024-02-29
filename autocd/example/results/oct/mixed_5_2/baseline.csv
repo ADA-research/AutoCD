@@ -1,2 +1,0 @@
-oct,shd,accuracy,fp,fn,config
-0.9949815910152532,1,0,0,1,"{""algorithm"": ""boss"", ""boss_data_order"": ""False"", ""boss_n_start_thread"": 3, ""boss_penalty"": 1.7744445937566364, ""boss_score"": ""dg-bic-score"", ""boss_structure"": 0.07337580100077346}"

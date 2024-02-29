@@ -1,2 +1,0 @@
-oct,shd,accuracy,fp,fn,config
-0.9826851645042025,0.8,0.2,0,0.8,"{""algorithm"": ""cpc"", ""cpc_alpha"": 0.027783491512452033, ""cpc_depth"": -1, ""cpc_rule"": 2, ""cpc_test"": ""dg-lr-test""}"

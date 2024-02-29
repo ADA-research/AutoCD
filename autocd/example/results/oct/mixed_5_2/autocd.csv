@@ -1,2 +1,0 @@
-oct,shd,accuracy,fp,fn,config
-0.9664871631557576,0.6,0.4,0,0.6,"{""algorithm"": ""pc"", ""pc_alpha"": 0.040784376464214935, ""pc_depth"": -1, ""pc_rule"": 3, ""pc_test"": ""dg-lr-test""}"
