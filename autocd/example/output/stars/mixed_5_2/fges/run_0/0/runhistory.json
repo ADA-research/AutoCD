@@ -1,0 +1,165 @@
+{
+  "stats": {
+    "submitted": 8,
+    "finished": 8,
+    "running": 0
+  },
+  "data": [
+    [
+      1,
+      null,
+      209652396,
+      null,
+      0.0,
+      191.52879405021667,
+      1,
+      1704285771.484918,
+      1704285963.0151775,
+      {}
+    ],
+    [
+      2,
+      null,
+      209652396,
+      null,
+      0.158,
+      469.6051871776581,
+      1,
+      1704285963.9773593,
+      1704286433.5844386,
+      {}
+    ],
+    [
+      3,
+      null,
+      209652396,
+      null,
+      0.0,
+      443.6418511867523,
+      1,
+      1704286434.000464,
+      1704286877.6441412,
+      {}
+    ],
+    [
+      4,
+      null,
+      209652396,
+      null,
+      0.037,
+      813.1214344501495,
+      1,
+      1704286890.8917284,
+      1704287704.015974,
+      {}
+    ],
+    [
+      5,
+      null,
+      209652396,
+      null,
+      0.0,
+      577.2043220996857,
+      1,
+      1704287704.3055863,
+      1704288281.5116317,
+      {}
+    ],
+    [
+      6,
+      null,
+      209652396,
+      null,
+      0.0,
+      383.987487077713,
+      1,
+      1704288282.246058,
+      1704288666.236374,
+      {}
+    ],
+    [
+      7,
+      null,
+      209652396,
+      null,
+      0.0,
+      623.7813951969147,
+      1,
+      1704288666.403406,
+      1704289290.1875532,
+      {}
+    ],
+    [
+      8,
+      null,
+      209652396,
+      null,
+      0.0,
+      704.5665938854218,
+      1,
+      1704289290.3163655,
+      1704289994.8847358,
+      {}
+    ]
+  ],
+  "configs": {
+    "1": {
+      "algorithm": "fges",
+      "fges_penalty": 1.2411293908953667,
+      "fges_score": "cg-bic-score",
+      "fges_structure": 0.42355247400701046
+    },
+    "2": {
+      "algorithm": "fges",
+      "fges_penalty": 0.4976916238665581,
+      "fges_score": "dg-bic-score",
+      "fges_structure": 1.118992330506444
+    },
+    "3": {
+      "algorithm": "fges",
+      "fges_penalty": 1.627932881936431,
+      "fges_score": "cg-bic-score",
+      "fges_structure": 0.9882062096148729
+    },
+    "4": {
+      "algorithm": "fges",
+      "fges_penalty": 0.8830893989652395,
+      "fges_score": "dg-bic-score",
+      "fges_structure": 1.5581160988658667
+    },
+    "5": {
+      "algorithm": "fges",
+      "fges_penalty": 1.9841156024485826,
+      "fges_score": "dg-bic-score",
+      "fges_structure": 1.7756827678531408
+    },
+    "6": {
+      "algorithm": "fges",
+      "fges_penalty": 1.4361064253049907,
+      "fges_score": "cg-bic-score",
+      "fges_structure": 1.6048618592588846
+    },
+    "7": {
+      "algorithm": "fges",
+      "fges_penalty": 1.3007255263604067,
+      "fges_score": "cg-bic-score",
+      "fges_structure": 1.3937131726596854
+    },
+    "8": {
+      "algorithm": "fges",
+      "fges_penalty": 1.3021207444068763,
+      "fges_score": "cg-bic-score",
+      "fges_structure": 0.8026343318943263
+    }
+  },
+  "config_origins": {
+    "1": "Initial Design: Sobol",
+    "2": "Initial Design: Sobol",
+    "3": "Initial Design: Sobol",
+    "4": "Initial Design: Sobol",
+    "5": "Initial Design: Sobol",
+    "6": "Acquisition Function Maximizer: Local Search",
+    "7": "Acquisition Function Maximizer: Local Search",
+    "8": "Acquisition Function Maximizer: Local Search"
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "hyperparameters": [
+    {
+      "name": "algorithm",
+      "type": "categorical",
+      "choices": [
+        "pc"
+      ],
+      "default": "pc",
+      "weights": null
+    },
+    {
+      "name": "pc_alpha",
+      "type": "uniform_float",
+      "log": false,
+      "lower": 0.01,
+      "upper": 0.05,
+      "default": 0.05
+    },
+    {
+      "name": "pc_depth",
+      "type": "constant",
+      "value": -1
+    },
+    {
+      "name": "pc_rule",
+      "type": "categorical",
+      "choices": [
+        1,
+        2,
+        3
+      ],
+      "default": 1,
+      "weights": null
+    },
+    {
+      "name": "pc_test",
+      "type": "categorical",
+      "choices": [
+        "cg-lr-test",
+        "dg-lr-test"
+      ],
+      "default": "cg-lr-test",
+      "weights": null
+    }
+  ],
+  "conditions": [
+    {
+      "child": "pc_alpha",
+      "parent": "algorithm",
+      "type": "EQ",
+      "value": "pc"
+    },
+    {
+      "child": "pc_depth",
+      "parent": "algorithm",
+      "type": "EQ",
+      "value": "pc"
+    },
+    {
+      "child": "pc_rule",
+      "parent": "algorithm",
+      "type": "EQ",
+      "value": "pc"
+    },
+    {
+      "child": "pc_test",
+      "parent": "algorithm",
+      "type": "EQ",
+      "value": "pc"
+    }
+  ],
+  "forbiddens": [],
+  "python_module_version": "0.6.1",
+  "json_format_version": 0.4
+}

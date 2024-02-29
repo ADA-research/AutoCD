@@ -1,0 +1,173 @@
+{
+  "stats": {
+    "submitted": 8,
+    "finished": 8,
+    "running": 0
+  },
+  "data": [
+    [
+      1,
+      null,
+      209652396,
+      null,
+      0.05600000000000001,
+      149.25396060943604,
+      1,
+      1704284900.9353101,
+      1704285050.1904309,
+      {}
+    ],
+    [
+      2,
+      null,
+      209652396,
+      null,
+      0.158,
+      389.6754024028778,
+      1,
+      1704285051.316318,
+      1704285440.9942036,
+      {}
+    ],
+    [
+      3,
+      null,
+      209652396,
+      null,
+      0.0655,
+      452.64478850364685,
+      1,
+      1704285441.902853,
+      1704285894.5498338,
+      {}
+    ],
+    [
+      4,
+      null,
+      209652396,
+      null,
+      0.202,
+      412.2967119216919,
+      1,
+      1704285895.1190708,
+      1704286307.4176555,
+      {}
+    ],
+    [
+      5,
+      null,
+      209652396,
+      null,
+      Infinity,
+      0.0,
+      2,
+      1704286308.6324117,
+      1704287208.7698653,
+      {}
+    ],
+    [
+      6,
+      null,
+      209652396,
+      null,
+      0.14200000000000002,
+      493.4076097011566,
+      1,
+      1704287221.901669,
+      1704287715.3105888,
+      {}
+    ],
+    [
+      7,
+      null,
+      209652396,
+      null,
+      0.18600000000000003,
+      567.1044130325317,
+      1,
+      1704287715.5487995,
+      1704288282.6550424,
+      {}
+    ],
+    [
+      8,
+      null,
+      209652396,
+      null,
+      0.091,
+      369.4915316104889,
+      1,
+      1704288283.1417036,
+      1704288652.635066,
+      {}
+    ]
+  ],
+  "configs": {
+    "1": {
+      "algorithm": "pc",
+      "pc_alpha": 0.034822587817907334,
+      "pc_depth": -1,
+      "pc_rule": 1,
+      "pc_test": "cg-lr-test"
+    },
+    "2": {
+      "algorithm": "pc",
+      "pc_alpha": 0.019953832477331162,
+      "pc_depth": -1,
+      "pc_rule": 2,
+      "pc_test": "dg-lr-test"
+    },
+    "3": {
+      "algorithm": "pc",
+      "pc_alpha": 0.04255865763872862,
+      "pc_depth": -1,
+      "pc_rule": 1,
+      "pc_test": "cg-lr-test"
+    },
+    "4": {
+      "algorithm": "pc",
+      "pc_alpha": 0.02766178797930479,
+      "pc_depth": -1,
+      "pc_rule": 3,
+      "pc_test": "dg-lr-test"
+    },
+    "5": {
+      "algorithm": "pc",
+      "pc_alpha": 0.04968231204897165,
+      "pc_depth": -1,
+      "pc_rule": 2,
+      "pc_test": "dg-lr-test"
+    },
+    "6": {
+      "algorithm": "pc",
+      "pc_alpha": 0.013485171988061628,
+      "pc_depth": -1,
+      "pc_rule": 3,
+      "pc_test": "dg-lr-test"
+    },
+    "7": {
+      "algorithm": "pc",
+      "pc_alpha": 0.025337660753031108,
+      "pc_depth": -1,
+      "pc_rule": 3,
+      "pc_test": "dg-lr-test"
+    },
+    "8": {
+      "algorithm": "pc",
+      "pc_alpha": 0.04702386553170644,
+      "pc_depth": -1,
+      "pc_rule": 3,
+      "pc_test": "cg-lr-test"
+    }
+  },
+  "config_origins": {
+    "1": "Initial Design: Sobol",
+    "2": "Initial Design: Sobol",
+    "3": "Initial Design: Sobol",
+    "4": "Initial Design: Sobol",
+    "5": "Initial Design: Sobol",
+    "6": "Acquisition Function Maximizer: Random Search (sorted)",
+    "7": "Acquisition Function Maximizer: Random Search (sorted)",
+    "8": "Acquisition Function Maximizer: Random Search (sorted)"
+  }
+}

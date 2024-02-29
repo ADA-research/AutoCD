@@ -1,0 +1,476 @@
+{
+  "hyperparameters": [
+    {
+      "name": "algorithm",
+      "type": "categorical",
+      "choices": [
+        "pc",
+        "pcstable",
+        "cpc",
+        "cpcstable",
+        "fges",
+        "boss",
+        "grasp"
+      ],
+      "default": "pc",
+      "weights": null
+    },
+    {
+      "name": "boss_data_order",
+      "type": "categorical",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "default": "True",
+      "weights": null
+    },
+    {
+      "name": "boss_n_start_thread",
+      "type": "uniform_int",
+      "log": false,
+      "lower": 1,
+      "upper": 10,
+      "default": 5
+    },
+    {
+      "name": "boss_penalty",
+      "type": "uniform_float",
+      "log": false,
+      "lower": 0.0,
+      "upper": 2.0,
+      "default": 1.0
+    },
+    {
+      "name": "boss_score",
+      "type": "categorical",
+      "choices": [
+        "cg-bic-score",
+        "dg-bic-score"
+      ],
+      "default": "cg-bic-score",
+      "weights": null
+    },
+    {
+      "name": "boss_structure",
+      "type": "uniform_float",
+      "log": false,
+      "lower": 0.0,
+      "upper": 2.0,
+      "default": 0.0
+    },
+    {
+      "name": "cpc_alpha",
+      "type": "uniform_float",
+      "log": false,
+      "lower": 0.01,
+      "upper": 0.05,
+      "default": 0.05
+    },
+    {
+      "name": "cpc_depth",
+      "type": "constant",
+      "value": -1
+    },
+    {
+      "name": "cpc_rule",
+      "type": "categorical",
+      "choices": [
+        1,
+        2,
+        3
+      ],
+      "default": 1,
+      "weights": null
+    },
+    {
+      "name": "cpc_test",
+      "type": "categorical",
+      "choices": [
+        "cg-lr-test",
+        "dg-lr-test"
+      ],
+      "default": "cg-lr-test",
+      "weights": null
+    },
+    {
+      "name": "cpcstable_alpha",
+      "type": "uniform_float",
+      "log": false,
+      "lower": 0.01,
+      "upper": 0.05,
+      "default": 0.05
+    },
+    {
+      "name": "cpcstable_depth",
+      "type": "constant",
+      "value": -1
+    },
+    {
+      "name": "cpcstable_rule",
+      "type": "categorical",
+      "choices": [
+        1,
+        2,
+        3
+      ],
+      "default": 1,
+      "weights": null
+    },
+    {
+      "name": "cpcstable_test",
+      "type": "categorical",
+      "choices": [
+        "cg-lr-test",
+        "dg-lr-test"
+      ],
+      "default": "cg-lr-test",
+      "weights": null
+    },
+    {
+      "name": "fges_penalty",
+      "type": "uniform_float",
+      "log": false,
+      "lower": 0.0,
+      "upper": 2.0,
+      "default": 1.0
+    },
+    {
+      "name": "fges_score",
+      "type": "categorical",
+      "choices": [
+        "cg-bic-score",
+        "dg-bic-score"
+      ],
+      "default": "cg-bic-score",
+      "weights": null
+    },
+    {
+      "name": "fges_structure",
+      "type": "uniform_float",
+      "log": false,
+      "lower": 0.0,
+      "upper": 2.0,
+      "default": 0.0
+    },
+    {
+      "name": "grasp_alpha",
+      "type": "uniform_float",
+      "log": false,
+      "lower": 0.01,
+      "upper": 0.05,
+      "default": 0.05
+    },
+    {
+      "name": "grasp_depth",
+      "type": "uniform_int",
+      "log": false,
+      "lower": 0,
+      "upper": 10,
+      "default": 1
+    },
+    {
+      "name": "grasp_n_starts",
+      "type": "uniform_int",
+      "log": false,
+      "lower": 1,
+      "upper": 10,
+      "default": 5
+    },
+    {
+      "name": "grasp_penalty",
+      "type": "uniform_float",
+      "log": false,
+      "lower": 0.0,
+      "upper": 2.0,
+      "default": 1.0
+    },
+    {
+      "name": "grasp_score",
+      "type": "categorical",
+      "choices": [
+        "cg-bic-score",
+        "dg-bic-score"
+      ],
+      "default": "cg-bic-score",
+      "weights": null
+    },
+    {
+      "name": "grasp_structure",
+      "type": "uniform_float",
+      "log": false,
+      "lower": 0.0,
+      "upper": 2.0,
+      "default": 0.0
+    },
+    {
+      "name": "grasp_test",
+      "type": "categorical",
+      "choices": [
+        "cg-lr-test",
+        "dg-lr-test"
+      ],
+      "default": "cg-lr-test",
+      "weights": null
+    },
+    {
+      "name": "pc_alpha",
+      "type": "uniform_float",
+      "log": false,
+      "lower": 0.01,
+      "upper": 0.05,
+      "default": 0.05
+    },
+    {
+      "name": "pc_depth",
+      "type": "constant",
+      "value": -1
+    },
+    {
+      "name": "pc_rule",
+      "type": "categorical",
+      "choices": [
+        1,
+        2,
+        3
+      ],
+      "default": 1,
+      "weights": null
+    },
+    {
+      "name": "pc_test",
+      "type": "categorical",
+      "choices": [
+        "cg-lr-test",
+        "dg-lr-test"
+      ],
+      "default": "cg-lr-test",
+      "weights": null
+    },
+    {
+      "name": "pcstable_alpha",
+      "type": "uniform_float",
+      "log": false,
+      "lower": 0.01,
+      "upper": 0.05,
+      "default": 0.05
+    },
+    {
+      "name": "pcstable_depth",
+      "type": "constant",
+      "value": -1
+    },
+    {
+      "name": "pcstable_rule",
+      "type": "categorical",
+      "choices": [
+        1,
+        2,
+        3
+      ],
+      "default": 1,
+      "weights": null
+    },
+    {
+      "name": "pcstable_test",
+      "type": "categorical",
+      "choices": [
+        "cg-lr-test",
+        "dg-lr-test"
+      ],
+      "default": "cg-lr-test",
+      "weights": null
+    }
+  ],
+  "conditions": [
+    {
+      "child": "boss_data_order",
+      "parent": "algorithm",
+      "type": "EQ",
+      "value": "boss"
+    },
+    {
+      "child": "boss_n_start_thread",
+      "parent": "algorithm",
+      "type": "EQ",
+      "value": "boss"
+    },
+    {
+      "child": "boss_penalty",
+      "parent": "algorithm",
+      "type": "EQ",
+      "value": "boss"
+    },
+    {
+      "child": "boss_score",
+      "parent": "algorithm",
+      "type": "EQ",
+      "value": "boss"
+    },
+    {
+      "child": "boss_structure",
+      "parent": "algorithm",
+      "type": "EQ",
+      "value": "boss"
+    },
+    {
+      "child": "cpc_alpha",
+      "parent": "algorithm",
+      "type": "EQ",
+      "value": "cpc"
+    },
+    {
+      "child": "cpc_depth",
+      "parent": "algorithm",
+      "type": "EQ",
+      "value": "cpc"
+    },
+    {
+      "child": "cpc_rule",
+      "parent": "algorithm",
+      "type": "EQ",
+      "value": "cpc"
+    },
+    {
+      "child": "cpc_test",
+      "parent": "algorithm",
+      "type": "EQ",
+      "value": "cpc"
+    },
+    {
+      "child": "cpcstable_alpha",
+      "parent": "algorithm",
+      "type": "EQ",
+      "value": "cpcstable"
+    },
+    {
+      "child": "cpcstable_depth",
+      "parent": "algorithm",
+      "type": "EQ",
+      "value": "cpcstable"
+    },
+    {
+      "child": "cpcstable_rule",
+      "parent": "algorithm",
+      "type": "EQ",
+      "value": "cpcstable"
+    },
+    {
+      "child": "cpcstable_test",
+      "parent": "algorithm",
+      "type": "EQ",
+      "value": "cpcstable"
+    },
+    {
+      "child": "fges_penalty",
+      "parent": "algorithm",
+      "type": "EQ",
+      "value": "fges"
+    },
+    {
+      "child": "fges_score",
+      "parent": "algorithm",
+      "type": "EQ",
+      "value": "fges"
+    },
+    {
+      "child": "fges_structure",
+      "parent": "algorithm",
+      "type": "EQ",
+      "value": "fges"
+    },
+    {
+      "child": "grasp_alpha",
+      "parent": "algorithm",
+      "type": "EQ",
+      "value": "grasp"
+    },
+    {
+      "child": "grasp_depth",
+      "parent": "algorithm",
+      "type": "EQ",
+      "value": "grasp"
+    },
+    {
+      "child": "grasp_n_starts",
+      "parent": "algorithm",
+      "type": "EQ",
+      "value": "grasp"
+    },
+    {
+      "child": "grasp_penalty",
+      "parent": "algorithm",
+      "type": "EQ",
+      "value": "grasp"
+    },
+    {
+      "child": "grasp_score",
+      "parent": "algorithm",
+      "type": "EQ",
+      "value": "grasp"
+    },
+    {
+      "child": "grasp_structure",
+      "parent": "algorithm",
+      "type": "EQ",
+      "value": "grasp"
+    },
+    {
+      "child": "grasp_test",
+      "parent": "algorithm",
+      "type": "EQ",
+      "value": "grasp"
+    },
+    {
+      "child": "pc_alpha",
+      "parent": "algorithm",
+      "type": "EQ",
+      "value": "pc"
+    },
+    {
+      "child": "pc_depth",
+      "parent": "algorithm",
+      "type": "EQ",
+      "value": "pc"
+    },
+    {
+      "child": "pc_rule",
+      "parent": "algorithm",
+      "type": "EQ",
+      "value": "pc"
+    },
+    {
+      "child": "pc_test",
+      "parent": "algorithm",
+      "type": "EQ",
+      "value": "pc"
+    },
+    {
+      "child": "pcstable_alpha",
+      "parent": "algorithm",
+      "type": "EQ",
+      "value": "pcstable"
+    },
+    {
+      "child": "pcstable_depth",
+      "parent": "algorithm",
+      "type": "EQ",
+      "value": "pcstable"
+    },
+    {
+      "child": "pcstable_rule",
+      "parent": "algorithm",
+      "type": "EQ",
+      "value": "pcstable"
+    },
+    {
+      "child": "pcstable_test",
+      "parent": "algorithm",
+      "type": "EQ",
+      "value": "pcstable"
+    }
+  ],
+  "forbiddens": [],
+  "python_module_version": "0.6.1",
+  "json_format_version": 0.4
+}

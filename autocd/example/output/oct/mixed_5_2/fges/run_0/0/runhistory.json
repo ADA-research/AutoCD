@@ -1,0 +1,298 @@
+{
+  "stats": {
+    "submitted": 15,
+    "finished": 15,
+    "running": 0
+  },
+  "data": [
+    [
+      1,
+      null,
+      209652396,
+      null,
+      0.9949815910152539,
+      143.75024104118347,
+      1,
+      1704285674.0002215,
+      1704285817.7521198,
+      {}
+    ],
+    [
+      2,
+      null,
+      209652396,
+      null,
+      0.9757097556053638,
+      70.70996403694153,
+      1,
+      1704285818.911863,
+      1704285889.62461,
+      {}
+    ],
+    [
+      3,
+      null,
+      209652396,
+      null,
+      0.9949815910152539,
+      113.2041232585907,
+      1,
+      1704285890.2765598,
+      1704286003.4822395,
+      {}
+    ],
+    [
+      4,
+      null,
+      209652396,
+      null,
+      0.9949815910152539,
+      166.83225750923157,
+      1,
+      1704286003.6365902,
+      1704286170.4708645,
+      {}
+    ],
+    [
+      5,
+      null,
+      209652396,
+      null,
+      0.9949815910152539,
+      279.73685574531555,
+      1,
+      1704286170.6694705,
+      1704286450.4087422,
+      {}
+    ],
+    [
+      6,
+      null,
+      209652396,
+      null,
+      0.9504934653344959,
+      228.10308051109314,
+      1,
+      1704286451.4093256,
+      1704286679.5140762,
+      {}
+    ],
+    [
+      7,
+      null,
+      209652396,
+      null,
+      0.9949815910152539,
+      408.84329295158386,
+      1,
+      1704286680.2873998,
+      1704287089.1342447,
+      {}
+    ],
+    [
+      8,
+      null,
+      209652396,
+      null,
+      0.9662970089647256,
+      472.82605385780334,
+      1,
+      1704287094.6555603,
+      1704287567.484362,
+      {}
+    ],
+    [
+      9,
+      null,
+      209652396,
+      null,
+      0.9757097556053638,
+      249.09538555145264,
+      1,
+      1704287568.0328715,
+      1704287817.1296725,
+      {}
+    ],
+    [
+      10,
+      null,
+      209652396,
+      null,
+      0.9949815910152539,
+      287.28828835487366,
+      1,
+      1704287817.2612975,
+      1704288104.5513651,
+      {}
+    ],
+    [
+      11,
+      null,
+      209652396,
+      null,
+      0.9949815910152539,
+      285.82173585891724,
+      1,
+      1704288117.3090186,
+      1704288403.1335595,
+      {}
+    ],
+    [
+      12,
+      null,
+      209652396,
+      null,
+      0.9949815910152539,
+      172.11720442771912,
+      1,
+      1704288403.4703712,
+      1704288575.590003,
+      {}
+    ],
+    [
+      13,
+      null,
+      209652396,
+      null,
+      0.9949815910152539,
+      212.80082058906555,
+      1,
+      1704288575.9545643,
+      1704288788.7580547,
+      {}
+    ],
+    [
+      14,
+      null,
+      209652396,
+      null,
+      0.9602338998846991,
+      395.692928314209,
+      1,
+      1704288791.5663874,
+      1704289187.260572,
+      {}
+    ],
+    [
+      15,
+      null,
+      209652396,
+      null,
+      0.9504934653344959,
+      379.4064428806305,
+      1,
+      1704289187.3960295,
+      1704289566.8042464,
+      {}
+    ]
+  ],
+  "configs": {
+    "1": {
+      "algorithm": "fges",
+      "fges_penalty": 1.2411293908953667,
+      "fges_score": "cg-bic-score",
+      "fges_structure": 0.42355247400701046
+    },
+    "2": {
+      "algorithm": "fges",
+      "fges_penalty": 0.4976916238665581,
+      "fges_score": "dg-bic-score",
+      "fges_structure": 1.118992330506444
+    },
+    "3": {
+      "algorithm": "fges",
+      "fges_penalty": 1.627932881936431,
+      "fges_score": "cg-bic-score",
+      "fges_structure": 0.9882062096148729
+    },
+    "4": {
+      "algorithm": "fges",
+      "fges_penalty": 0.8830893989652395,
+      "fges_score": "dg-bic-score",
+      "fges_structure": 1.5581160988658667
+    },
+    "5": {
+      "algorithm": "fges",
+      "fges_penalty": 1.9841156024485826,
+      "fges_score": "dg-bic-score",
+      "fges_structure": 1.7756827678531408
+    },
+    "6": {
+      "algorithm": "fges",
+      "fges_penalty": 0.17425859940308142,
+      "fges_score": "dg-bic-score",
+      "fges_structure": 1.5484673788684333
+    },
+    "7": {
+      "algorithm": "fges",
+      "fges_penalty": 0.14207211639577388,
+      "fges_score": "cg-bic-score",
+      "fges_structure": 0.5291112242092539
+    },
+    "8": {
+      "algorithm": "fges",
+      "fges_penalty": 0.13120814269476705,
+      "fges_score": "cg-bic-score",
+      "fges_structure": 1.430841083161504
+    },
+    "9": {
+      "algorithm": "fges",
+      "fges_penalty": 0.4710381787068649,
+      "fges_score": "dg-bic-score",
+      "fges_structure": 1.019918251972897
+    },
+    "10": {
+      "algorithm": "fges",
+      "fges_penalty": 0.15646183472456243,
+      "fges_score": "cg-bic-score",
+      "fges_structure": 0.5210955372293473
+    },
+    "11": {
+      "algorithm": "fges",
+      "fges_penalty": 0.3647957568038496,
+      "fges_score": "cg-bic-score",
+      "fges_structure": 0.41835085777093606
+    },
+    "12": {
+      "algorithm": "fges",
+      "fges_penalty": 0.4976916238665581,
+      "fges_score": "cg-bic-score",
+      "fges_structure": 0.9098945957817167
+    },
+    "13": {
+      "algorithm": "fges",
+      "fges_penalty": 0.7668830376515554,
+      "fges_score": "dg-bic-score",
+      "fges_structure": 1.2798420426550476
+    },
+    "14": {
+      "algorithm": "fges",
+      "fges_penalty": 0.21941923545101535,
+      "fges_score": "dg-bic-score",
+      "fges_structure": 1.4931066216969093
+    },
+    "15": {
+      "algorithm": "fges",
+      "fges_penalty": 0.18145290429825983,
+      "fges_score": "dg-bic-score",
+      "fges_structure": 1.4971330185141338
+    }
+  },
+  "config_origins": {
+    "1": "Initial Design: Sobol",
+    "2": "Initial Design: Sobol",
+    "3": "Initial Design: Sobol",
+    "4": "Initial Design: Sobol",
+    "5": "Initial Design: Sobol",
+    "6": "Acquisition Function Maximizer: Random Search (sorted)",
+    "7": "Acquisition Function Maximizer: Random Search (sorted)",
+    "8": "Acquisition Function Maximizer: Local Search",
+    "9": "Acquisition Function Maximizer: Local Search",
+    "10": "Acquisition Function Maximizer: Local Search",
+    "11": "Acquisition Function Maximizer: Local Search",
+    "12": "Acquisition Function Maximizer: Local Search",
+    "13": "Acquisition Function Maximizer: Random Search (sorted)",
+    "14": "Acquisition Function Maximizer: Local Search",
+    "15": "Acquisition Function Maximizer: Local Search"
+  }
+}
