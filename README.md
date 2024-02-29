@@ -24,11 +24,11 @@ git clone https://github.com/cmu-phil/py-tetrad/
 mkdir causalcmd
 ```
 https://github.com/bd2kccd/causal-cmd/ 
-* Install Python packages
+
+Instruction to install SMAC can be found in [SMAC3](https://github.com/automl/SMAC3). However, this repository is only tested with Python 3.9. The other Python packages can be installed:
 ```bash
 cd build-utils
 pip install -r python_requirements.txt
-```
 
 ## Usage
 
