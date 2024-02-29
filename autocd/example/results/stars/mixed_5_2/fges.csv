@@ -1,0 +1,2 @@
+stars,shd,accuracy,fp,fn,config
+0,1,0,0,1,"{""algorithm"": ""fges"", ""fges_penalty"": 1.2411293908953667, ""fges_score"": ""cg-bic-score"", ""fges_structure"": 0.42355247400701046}"

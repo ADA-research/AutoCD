@@ -1,0 +1,2 @@
+oct,shd,accuracy,fp,fn,config
+0.9949815910152539,1,0,0,1,"{""algorithm"": ""pcstable"", ""pcstable_alpha"": 0.012336650341749193, ""pcstable_depth"": -1, ""pcstable_rule"": 1, ""pcstable_test"": ""cg-lr-test""}"

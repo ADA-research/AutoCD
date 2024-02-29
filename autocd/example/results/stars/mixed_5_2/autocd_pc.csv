@@ -1,0 +1,2 @@
+stars,shd,accuracy,fp,fn,config
+0,1,0,0,1,"{""algorithm"": ""grasp"", ""grasp_alpha"": 0.03486528065055609, ""grasp_depth"": 0, ""grasp_n_starts"": 10, ""grasp_penalty"": 1.2671741358935833, ""grasp_score"": ""dg-bic-score"", ""grasp_structure"": 0.8340908475220203, ""grasp_test"": ""cg-lr-test""}"
