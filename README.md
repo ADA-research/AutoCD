@@ -29,6 +29,7 @@ Instruction to install SMAC can be found in [SMAC3](https://github.com/automl/SM
 ```bash
 cd build-utils
 pip install -r python_requirements.txt
+```
 
 ## Usage
 
