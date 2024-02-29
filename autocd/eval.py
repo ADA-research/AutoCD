@@ -108,7 +108,7 @@ def evaluate(true_graph, est_graph):
     
     Returns
     -------
-    Normalized SHD, CA, FP, FN values with the normalization value.
+    Normalized SHD, CA, FP, FN values.
     """
     edge_conf_matrix = AdjacencyConfusion(true_graph, est_graph)
     
@@ -122,7 +122,7 @@ def evaluate(true_graph, est_graph):
     shd = SHD(true_graph, est_graph).get_shd() / n_edges
     fp = edge_fp / n_edges
     fn = edge_fn / n_edges
-    return shd, accuracy, fp, fn, n_edges
+    return shd, accuracy, fp, fn
 
 def bootstrapping(configurations, sample_size, n_samples):
     """Create bootstrap distribution of the results.
@@ -327,19 +327,19 @@ def run_stars(opts):
         
         if np.isnan(best_idx) or np.isnan(best_value):
             output_configurators.append(
-                (np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, "")
+                (np.nan, np.nan, np.nan, np.nan, np.nan, "")
             )
         else:
             true_graph = get_cpdag(true_graph)
             est_graph = get_cpdag(est_graphs[best_idx])
-            shd, accuracy, fp, fn, n_edges = evaluate(true_graph, est_graph)
+            shd, accuracy, fp, fn = evaluate(true_graph, est_graph)
             output_configurators.append(
-                (best_value, shd, accuracy, fp, fn, n_edges, best_config)
+                (best_value, shd, accuracy, fp, fn, best_config)
             )
 
     dataframe = pd.DataFrame(
         output_configurators,
-        columns=[f"{objective}", "shd", "accuracy", "fp", "fn", "edges", "config"]
+        columns=[f"{objective}", "shd", "accuracy", "fp", "fn", "config"]
     )
     dataframe["config"] = dataframe["config"].apply(json.dumps)
     os.makedirs(f"results/{objective}/{dataset}", exist_ok=True)
@@ -398,19 +398,19 @@ def run_oct(opts):
 
         if np.isnan(best_idx) or np.isnan(best_value):
             output_configurators.append(
-                (np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, "")
+                (np.nan, np.nan, np.nan, np.nan, np.nan, "")
             )
         else:
             true_graph = get_cpdag(true_graph)
             est_graph = get_cpdag(est_graphs[best_idx])
-            shd, accuracy, fp, fn, n_edges = evaluate(true_graph, est_graph)
+            shd, accuracy, fp, fn = evaluate(true_graph, est_graph)
             output_configurators.append(
-                (best_value, shd, accuracy, fp, fn, n_edges, best_config)
+                (best_value, shd, accuracy, fp, fn, best_config)
             )
 
     dataframe = pd.DataFrame(
         output_configurators,
-        columns=[f"{objective}", "shd", "accuracy", "fp", "fn", "edges", "config"]
+        columns=[f"{objective}", "shd", "accuracy", "fp", "fn", "config"]
     )
     dataframe["config"] = dataframe["config"].apply(json.dumps)
     os.makedirs(f"results/{objective}/{dataset}", exist_ok=True)
@@ -472,7 +472,7 @@ def run_eval(opts):
         
         if np.isinf(best_value) or not best_config:
             print("Encountered Infinity value")
-            output_configurators.append((np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, ""))
+            output_configurators.append((np.nan, np.nan, np.nan, np.nan, np.nan, ""))
         else:
             configuration = Configuration(config_space, best_config)
             if method.startswith("autocd"):
@@ -484,9 +484,9 @@ def run_eval(opts):
 
                 true_graph = get_cpdag(true_graph)
                 est_graph = get_cpdag(est_graphs[best_idx])
-                shd, accuracy, fp, fn, n_edges = evaluate(true_graph, est_graph)
+                shd, accuracy, fp, fn = evaluate(true_graph, est_graph)
                 output_configurators.append(
-                    (best_value, shd, accuracy, fp, fn, n_edges, best_config)
+                    (best_value, shd, accuracy, fp, fn, best_config)
                 )
             else:
                 process = ctx.Process(
@@ -498,18 +498,18 @@ def run_eval(opts):
                 try:
                     est_graph = queue.get(True, opts.trial_walltime_limit)
                     true_graph = get_cpdag(true_graph)
-                    shd, accuracy, fp, fn, n_edges = evaluate(true_graph, est_graph)
+                    shd, accuracy, fp, fn = evaluate(true_graph, est_graph)
                     output_configurators.append(
-                        (best_value, shd, accuracy, fp, fn, n_edges, best_config)
+                        (best_value, shd, accuracy, fp, fn, best_config)
                     )
                 except Empty:
                     process.kill()
                     print("Encountered Infinity value")
-                    output_configurators.append((np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, ""))
+                    output_configurators.append((np.nan, np.nan, np.nan, np.nan, np.nan, ""))
 
     dataframe = pd.DataFrame(
         output_configurators,
-        columns=[f"{objective}", "shd", "accuracy", "fp", "fn", "edges", "config"]
+        columns=[f"{objective}", "shd", "accuracy", "fp", "fn", "config"]
     )
     dataframe["config"] = dataframe["config"].apply(json.dumps)
     os.makedirs(f"results/{objective}/{dataset}", exist_ok=True)
