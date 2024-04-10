@@ -3,7 +3,7 @@ import jpype.imports
 try:
     jpype.startJVM(classpath=["pytetrad/tetrad-current.jar"])
 except OSError:
-    pass
+    print("Unable to start JVM. Please make sure that the 'repo/autocd/pytetrad/tetrad-current.jar' file is present.")
 
 import edu.cmu.tetrad.data as data
 from edu.cmu.tetrad.util import Params, Parameters
