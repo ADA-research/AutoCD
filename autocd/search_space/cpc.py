@@ -1,5 +1,6 @@
 import os
 import subprocess
+import pandas as pd
 from datetime import datetime
 from ConfigSpace import ConfigurationSpace, EqualsCondition
 from ConfigSpace.hyperparameters import (
