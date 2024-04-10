@@ -76,8 +76,12 @@ def main(opts):
     dataset = opts.data_dir.split("/")[-1]
     data_type = dataset.split("_")[0]
     autocd = True if opts.algorithm == "autocd" else False
-    # output_dir = f"output/{opts.objective_function}/{dataset}/{opts.algorithm}"
-    output_dir=f"output/{opts.objective_function}/{dataset}/{opts.algorithm}_pc"
+
+    if opts.start_pc:
+        output_dir = f"output/{opts.objective_function}/{dataset}/{opts.algorithm}_pc"
+    else:
+        output_dir = f"output/{opts.objective_function}/{dataset}/{opts.algorithm}"
+        
     config_space = configuration_space(data_type, opts.algorithm, opts.seed)
 
     for run in range(opts.seed, opts.seed + opts.repetitions):
