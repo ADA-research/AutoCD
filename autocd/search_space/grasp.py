@@ -1,5 +1,6 @@
 import os
 import subprocess
+import pandas as pd
 from datetime import datetime
 from ConfigSpace import ConfigurationSpace, EqualsCondition, NotEqualsCondition
 from ConfigSpace.hyperparameters import (
@@ -57,6 +58,11 @@ class GRaSP:
         -------
         Adjacency matrix of the estimated causal graph in DAG and CPDAG.
         """
+        try:
+            pd.read_csv(datapath)
+        except FileNotFoundError:
+            raise FileNotFoundError(f"Error: The file {datapath} was not found. Please make sure the file exists.")
+            
         os.makedirs("causalcmd/", exist_ok=True)
         prefix = "causalcmd/grasp_" + str(datetime.now()).replace(" ", "_")
         if config["score"] == "bdeu-score":
