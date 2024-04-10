@@ -15,16 +15,16 @@ To obtain the Java JAR files, py-tetrad and causal-cmd need to be installed. Thi
 ```bash
 pip install Jpype1
 ```
-* Clone the github repository py-tetrad
+* Clone the github repository py-tetrad and place the JAR file in the directory `py-tetrad/pytetrad` under the path `repo/autocd/pytetrad`
 ```bash
 git clone https://github.com/cmu-phil/py-tetrad/
 ```
-* Download the JAR file from github repository causal-cmd and store JAR file under causalcmd folder https://github.com/bd2kccd/causal-cmd/ 
+* Download the JAR file from github repository causal-cmd and store JAR file under `repo/autocd/causalcmd` [https://github.com/bd2kccd/causal-cmd/tree/release-v1.11.0](https://github.com/bd2kccd/causal-cmd/tree/release-v1.11.0)
 ```bash
 mkdir causalcmd
 ```
 
-Instruction to install SMAC can be found in [SMAC3](https://github.com/automl/SMAC3). However, this repository is only tested with Python 3.9. The other Python packages can be installed:
+Instruction to install SMAC can be found in [SMAC3](https://github.com/automl/SMAC3). This repository is only tested with Python 3.9. The file `python_requirements.txt` contains other Python packages (e.g. numpy and pandas) and can be installed:
 ```bash
 cd build-utils
 pip install -r python_requirements.txt
@@ -38,7 +38,7 @@ The data, ground truth graph, data information, and data splits can be generated
 ```bash
 python generate_data.py --nodes 10 --degree 3 --instances 1000 --data_type mixed --repetition 25 --subsamples 20 --folds 10 --seed 0
 ```
-This command creates a graphical model with 10 nodes, average node degree 3, and mixed variables. This model is used to simulate a dataset with 1000 instances using seed 0. This is repeated 25 times such that we have 25 different datasets. The datasets are then split using subsampling (20 subsamples) and KFold crossvalidation (10 training-validation sets). These splits are stored in "splits/mixed_20_2".
+This command creates a graphical model with 10 nodes, average node degree 3, and mixed variables. This model is used to simulate a dataset with 1000 instances using seed 0. This is repeated 25 times such that we have 25 different datasets. The datasets are then split using subsampling (20 subsamples) and KFold cross-validation (10 training-validation sets). These splits are stored in "splits/mixed_10_3".
 
 ### Running AutoCD
 
@@ -46,7 +46,7 @@ The following command can be used to run AutoCD:
 ```bash
 python run.py --data_dir splits/mixed_20_20 --algorithm autocd --objective_function oct --walltime_limit 3600 --trial_walltime_limit 900 -deterministic --repetitions 25 --seed 0
 ```
-This command runs AutoCD with splits located in "splits/mixed_20_20" using OCT as objective function with a budget of 1 hour, each trial terminates after 15 min and only one seed is used. After 25 hours (25 repetitions), the results are stored in the folder "output/oct/mixed_20_20/autocd" which contains 25 folders for each run.
+This command runs AutoCD with splits located in "splits/mixed_20_20" using OCT as loss function with a budget of 1 hour, each trial terminates after 15 min and only one seed is used. After 25 hours (25 repetitions), the results are stored in the folder "output/oct/mixed_20_20/autocd" which contains 25 folders for each run.
 
 ### Evaluation
 
