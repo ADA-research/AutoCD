@@ -15,11 +15,11 @@ To obtain the Java JAR files, py-tetrad and causal-cmd need to be installed. Thi
 ```bash
 pip install Jpype1
 ```
-* Clone the github repository py-tetrad and place the JAR file in the directory `py-tetrad/pytetrad` under the path `repo/autocd/pytetrad`
+* Clone the github repository py-tetrad and place the JAR file in the directory `py-tetrad/pytetrad` under the path `repo/autocd/pytetrad` and make sure that the JAR file is named `tetrad-current.jar`
 ```bash
 git clone https://github.com/cmu-phil/py-tetrad/
 ```
-* Download the JAR file from github repository causal-cmd and store JAR file under `repo/autocd/causalcmd` [https://github.com/bd2kccd/causal-cmd/tree/release-v1.11.0](https://github.com/bd2kccd/causal-cmd/tree/release-v1.11.0)
+* Download the JAR file from github repository causal-cmd and store JAR file under `repo/autocd/causalcmd` and make sure that the JAR file is named `causal-cmd-1.11.0.jar` [https://github.com/bd2kccd/causal-cmd/tree/release-v1.11.0](https://github.com/bd2kccd/causal-cmd/tree/release-v1.11.0)
 ```bash
 mkdir causalcmd
 ```
