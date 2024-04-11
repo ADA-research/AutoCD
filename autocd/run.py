@@ -22,13 +22,13 @@ def parse_args():
         choices=["autocd", "pc", "fges", "lingam", "golem"],
         help="Search space of the method/algorithm"
     )
-    parser.add_argument(
-        "--objective_function",
-        type=str,
-        required=True,
-        choices=["stars", "oct"],
-        help="Objective function of SMAC",
-    )
+    # parser.add_argument(
+    #     "--objective_function",
+    #     type=str,
+    #     required=True,
+    #     choices=["stars", "oct"],
+    #     help="Objective function of SMAC",
+    # )
     parser.add_argument(
         "--walltime_limit",
         type=int,
@@ -75,6 +75,11 @@ def main(opts):
     # data_dir example: "splits/continuous_5_2"
     dataset = opts.data_dir.split("/")[-1]
     data_type = dataset.split("_")[0]
+    if data_type == "continuous":
+        objective_function = "stars"
+    else:
+        objective_function = "oct"
+        
     autocd = True if opts.algorithm == "autocd" else False
 
     if opts.start_pc:
@@ -105,9 +110,9 @@ def main(opts):
             scenario=scenario, n_configs=5
         )
         
-        if opts.objective_function == "stars":
+        if objective_function == "stars":
             objective = StARS(datapath, data_info, autocd, run)
-        elif opts.objective_function == "oct":
+        elif objective_function == "oct":
             objective = OCT(datapath, data_info, autocd, run)
         else:
             raise ValueError(f"This objective function doesn't exist: {opts.objective_function}")
