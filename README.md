@@ -44,9 +44,9 @@ This command creates a graphical model with 10 nodes, average node degree 3, and
 
 The following command can be used to run AutoCD:
 ```bash
-python run.py --data_dir splits/mixed_10_3 --algorithm autocd --objective_function oct --walltime_limit 3600 --trial_walltime_limit 900 -deterministic --repetitions 25 --seed 0
+python run.py --data_dir splits/mixed_10_3 --algorithm autocd --walltime_limit 3600 --trial_walltime_limit 900 -deterministic --repetitions 25 --seed 0
 ```
-This command runs AutoCD with splits located in "splits/mixed_10_3" using OCT as loss function with a budget of 1 hour, each trial terminates after 15 min and only one seed is used. After 25 hours (25 repetitions), the results are stored in the folder "output/oct/mixed_10_3/autocd" which contains 25 folders for each run.
+This command runs AutoCD with splits located in "splits/mixed_10_3" with a budget of 1 hour, each trial terminates after 15 min and only one seed is used. After 25 hours (25 repetitions), the results are stored in the folder "output/oct/mixed_10_3/autocd" which contains 25 folders for each run. The StARS loss function will be used when the dataset is continuous, otherwise the OCT loss function will be used.
 
 ### Evaluation
 
